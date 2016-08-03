@@ -1,0 +1,26 @@
+1468431095	127.0.0.1	C	start	admin	created		49
+1468511022	127.0.0.1	E	start	admin	[Categories] 		90
+1468511052	127.0.0.1	E	start	admin			-27
+1468511093	127.0.0.1	E	start	admin			-42
+1468511103	127.0.0.1	E	start	admin			2
+1468512269	127.0.0.1	E	start	admin	[General] 		51
+1468512277	127.0.0.1	E	start	admin	[General] 		20
+1468512326	127.0.0.1	E	start	admin	[General] 		8
+1468590376	127.0.0.1	C	pcr	admin	created		3
+1469191032	127.0.0.1	E	pcr	admin			16
+1469888862	127.0.0.1	E	start	admin	[General] 		1
+1469889031	127.0.0.1	E	start	admin	[Genotyping] 		43
+1469890034	127.0.0.1	C	genotyping:genotyping	admin	created		868
+1469890272	127.0.0.1	E	genotyping:genotyping	admin			117
+1469890391	127.0.0.1	E	genotyping:genotyping	admin	[Protocol] 		97
+1469890612	127.0.0.1	E	genotyping:genotyping	admin	[Table] 		655
+1469890633	127.0.0.1	E	genotyping:genotyping	admin			-124
+1469890792	127.0.0.1	E	genotyping:genotyping	admin	[Table] 		-132
+1469890826	127.0.0.1	E	genotyping:genotyping	admin	[Table] 		189
+1469890890	127.0.0.1	E	genotyping:genotyping	admin			-4
+1469891314	127.0.0.1	E	start	admin			23
+1469891348	127.0.0.1	E	start	admin			-23
+1469891442	127.0.0.1	E	start	admin	[Genotyping] 		20
+1469891469	127.0.0.1	E	start	admin	[Genotyping] 		-21
+1469891487	127.0.0.1	E	start	admin	[Genotyping] 		2
+1469891510	127.0.0.1	E	start	admin	[Genotyping] 		2

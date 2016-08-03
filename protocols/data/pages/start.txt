@@ -1,0 +1,12 @@
+====== Protocols ======
+
+===== General =====
+  * [[.PCR|PCR]]
+  * Ligation
+  * Transformation
+  * ISH
+  * Antibody staining
+
+
+===== Genotyping =====
+  * [[genotyping:Genotyping|Genotyping template]]
