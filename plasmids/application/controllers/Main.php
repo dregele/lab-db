@@ -44,39 +44,22 @@ class Main extends CI_Controller {
 
 		$ia_user = $this->ion_auth->user()->row()->username;
 		$ia_group = $this->ion_auth->get_users_groups()->row()->name;
+
 		$crud = new grocery_CRUD();
 
-		switch($ia_group)
 
-		{
-
-		case('admin' || 'members'):
-		
-		break;
-
-
-		case('students'):
-
+		if ($this->ion_auth->in_group('students')) {
 			$crud->unset_edit();
 			$crud->unset_delete();
+		}
 
-		break;
-		
-		case('guests'):
-
+		elseif ($this->ion_auth->in_group('guests')) {
 			$crud->unset_edit();
 			$crud->unset_delete();
 			$crud->unset_add();
-
-		break;
-
-		default:
-
-			redirect('auth/login');
-
-		break;
-
 		}
+
+		else{}
 
 
 
@@ -149,37 +132,18 @@ class Main extends CI_Controller {
 		$ia_group = $this->ion_auth->get_users_groups()->row()->name;
 		$crud = new grocery_CRUD();
 
-		switch($ia_group)
-
-		{
-
-		case('admin' || 'members'):
-		
-		break;
-
-
-		case('students'):
-
+		if ($this->ion_auth->in_group('students')) {
 			$crud->unset_edit();
 			$crud->unset_delete();
+		}
 
-		break;
-		
-		case('guests'):
-
+		elseif ($this->ion_auth->in_group('guests')) {
 			$crud->unset_edit();
 			$crud->unset_delete();
 			$crud->unset_add();
-
-		break;
-
-		default:
-
-			redirect('auth/login');
-
-		break;
-
 		}
+
+		else{}
 
 
 
@@ -187,9 +151,9 @@ class Main extends CI_Controller {
 		$crud->set_subject('Oligo');
 		$crud->columns('id', 'name', 'box', 'sequence', 'use_for', 'description');
 
-		$crud->required_fields('id', 'name', 'box', 'sequence');
-		$crud->add_fields('name', 'box', 'sequence', 'use_for', 'description', 'target', 'pcr_conditions', 'added_by', 'added_on');
-		$crud->edit_fields('name', 'box', 'sequence', 'use_for', 'description', 'target', 'pcr_conditions', 'modified_by', 'modified_on');
+		$crud->required_fields('name', 'box', 'sequence');
+		// $crud->add_fields('name', 'box', 'sequence', 'use_for', 'description', 'target', 'pcr_conditions', 'added_by', 'added_on');
+		// $crud->edit_fields('name', 'box', 'sequence', 'use_for', 'description', 'target', 'pcr_conditions', 'modified_by', 'modified_on');
 		$crud->display_as('id','Number');
 
 		$crud->field_type('added_by', 'hidden', $ia_user);
@@ -199,7 +163,7 @@ class Main extends CI_Controller {
 
 
 
-			$crud->unset_read();
+		$crud->unset_read();
 		$crud->add_action('Details', base_url().'assets/grocery_crud/themes/flexigrid/css/images/magnifier.png', 'details/showoligo');
 
 		$crud->set_theme('flexigrid');
@@ -219,6 +183,9 @@ class Main extends CI_Controller {
 
 		$this->_example_output($output);
 	}	
+
+
+
 
 
 public function _example_output($output = null)

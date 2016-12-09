@@ -19,15 +19,12 @@ foreach($css_files as $file): ?>
 </style>
 </head>
 <body>
-<?php echo $ia_user;?>
 <!-- Beginning header -->
-<div id="logo">AanstadLab</div><div id="tablename"><?php echo "$whatisthis <img height='24px' src='$whaticon'>" ?></div>
- <ul>
-  <li><a href="<?php echo base_url();?>index.php/main/plasmids">Plasmids</a></li>
-  <li><a href="<?php echo base_url();?>index.php/main/oligos">Oligos</a></li>
-  <li><a href="http://localhost/protocols">Protocols</a></li>
-  <li style="float:right"><a class="active" href="<?php echo base_url();?>index.php/auth/logout">Logout</a></li>
-  <li class="texts" style="float:right"><?php echo "Logged in as $ia_user"; ?></li>  
+<h1>Admin</h1>
+<ul>
+  <li><a href="<?php echo base_url();?>index.php/admin/index">Users</a></li>
+  <li><a href="<?php echo base_url();?>index.php/admin/groups">Groups</a></li>
+  <li><a href="<?php echo base_url();?>index.php/auth/create_user">Add user</a></li>
 </ul>
 
 <!-- End of header-->
@@ -37,7 +34,7 @@ foreach($css_files as $file): ?>
  
     </div>
 <!-- Beginning footer -->
-
+After adding an user, remember to activate it.
 <!-- End of Footer -->
 </body>
 </html>

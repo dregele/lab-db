@@ -2253,4 +2253,23 @@ class Ion_auth_model extends CI_Model
 		// just return the string IP address now for better compatibility
 		return $ip_address;
 	}
+
+
+		/**
+	 * group list
+	 *
+	 * @return array
+	 * @author Susilo N
+	 **/
+	public function grouplist()
+	{
+	    $query = $this->db->get('groups');
+
+	    foreach ($query->result() as $row)
+	            {
+	                  $listArray[$row->id] = $row->name;                
+	            }               
+
+	    return $listArray;
+	}
 }

@@ -15,14 +15,20 @@
             <?php echo form_input($last_name);?>
       </p>
 
-      <p>
-            <?php echo lang('edit_user_company_label', 'company');?> <br />
-            <?php echo form_input($company);?>
-      </p>
+      <?php
+      if($identity_column!=='email') {
+          echo '<p>';
+          echo lang('create_user_identity_label', 'identity');
+          echo '<br />';
+          echo form_error('identity');
+          echo form_input($identity);
+          echo '</p>';
+      }
+      ?>
 
       <p>
-            <?php echo lang('edit_user_phone_label', 'phone');?> <br />
-            <?php echo form_input($phone);?>
+            <?php echo lang('edit_user_email_label', 'email');?> <br />
+            <?php echo form_input($email);?>
       </p>
 
       <p>

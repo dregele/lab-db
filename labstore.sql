@@ -16,10 +16,12 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
+DROP DATABASE IF EXISTS `labstore`;
+CREATE DATABASE `labstore`;
+USE `labstore`;
 --
 -- Database: `labstore`
 --
-
 -- --------------------------------------------------------
 
 --
@@ -69,13 +71,13 @@ CREATE TABLE IF NOT EXISTS `oligos` (
   `name` varchar(128) NOT NULL DEFAULT '',
   `sequence` varchar(255) NOT NULL,
   `use_for` varchar(64) NOT NULL,
+  `target` varchar(64) NOT NULL,
   `pcr_conditions` text NOT NULL,
   `description` text NOT NULL,
   `added_on` date NOT NULL,
   `added_by` varchar(64) NOT NULL DEFAULT '',
   `modified_on` date NOT NULL DEFAULT '0000-00-00',
   `modified_by` varchar(64) NOT NULL DEFAULT '',
-  `ID_user` varchar(64) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
@@ -166,8 +168,7 @@ CREATE TABLE IF NOT EXISTS `users_groups` (
 --
 
 INSERT INTO `users_groups` (`id`, `user_id`, `group_id`) VALUES
-(1, 1, 1),
-(2, 1, 2);
+(1, 1, 1);
 
 --
 -- Constraints for dumped tables
