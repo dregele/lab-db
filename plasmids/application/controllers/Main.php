@@ -83,7 +83,7 @@ class Main extends CI_Controller {
 			 ->display_as('seq_file','Sequence file (GB/FASTA)')
 			 ->display_as('map_file','Plasmid map')
 			 ->display_as('extra_file','Additional file')
-			 ->display_as('box','Plasmid Box');
+			 ->display_as('box','Plasmid Box'); 
 
 		$crud->add_action('Details', base_url().'assets/grocery_crud/themes/flexigrid/css/images/magnifier.png', 'details/showplasmid');
 
@@ -105,6 +105,7 @@ class Main extends CI_Controller {
 		$uinfo = array('ia_user' => $ia_user,
 						'ia_group' => $ia_group,
 						'whatisthis' => 'Plasmids',
+						'whattable' => 'plasmids',
 						'whaticon' => base_url().'assets/grocery_crud/themes/flexigrid/css/images/plasmids.svg',
 						);
 
@@ -173,6 +174,7 @@ class Main extends CI_Controller {
 		$uinfo = array('ia_user' => $ia_user,
 						'ia_group' => $ia_group,
 						'whatisthis' => 'Oligos',
+						'whattable' => 'oligos',
 						'whaticon' => base_url().'assets/grocery_crud/themes/flexigrid/css/images/oligos.svg',
 						);
 

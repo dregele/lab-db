@@ -20,11 +20,14 @@ foreach($css_files as $file): ?>
 </head>
 <body>
 <!-- Beginning header -->
-<h1>Admin</h1>
+<div id="logo">Admin</div><div id="tablename">Users</div>
+
 <ul>
   <li><a href="<?php echo base_url();?>index.php/admin/index">Users</a></li>
   <li><a href="<?php echo base_url();?>index.php/admin/groups">Groups</a></li>
   <li><a href="<?php echo base_url();?>index.php/auth/create_user">Add user</a></li>
+  <li><a href="<?php echo base_url();?>index.php/main">Back</a></li>  
+  <li style="float:right"><a class="active" href="<?php echo base_url();?>index.php/auth/logout">Logout</a></li>
 </ul>
 
 <!-- End of header-->
