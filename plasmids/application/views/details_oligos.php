@@ -17,9 +17,11 @@
 
 
 <div id="container">
+<a href="<?php echo base_url();?>index.php/main/oligos">
 	<div id="header">
 		<div id="logo">AanstadLab</div>
 		<div id="tablename">Oligos <img src="<?php echo base_url().'assets/grocery_crud/themes/flexigrid/css/images/oligos.png'?>"></div>
+</a>
  	</div>
 
 	<div id="toprow">
